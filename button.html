@@ -1,0 +1,55 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bag_button {
+      background-color: lightgreen;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 25px;
+      }
+
+      .wishlist{
+        background-color: lightgray;
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 5px 35px;
+
+      }
+
+     .items{
+      background-color: lightgreen;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 25px;
+      }
+  </style>
+</head>
+<body>
+  <br>
+  <button class="bag_button" onclick="
+  cartquantity++;
+  document.querySelector('.cartquantity').innerText = `Your bag has ${cartquantity} items`">Add to bags</button>
+
+
+  <button class="wishlist" onclick="
+  cartquantity--;
+  document.querySelector('.cartquantity').innerText = `Your bag has ${cartquantity} items`">❤️ Wishlist</button>
+
+
+  <button class="items" onclick=" 
+  cartquantity += 2;
+  document.querySelector('.cartquantity').innerText = `Your bag has ${cartquantity} items`"> 1 + 1 items</button>
+
+  <h1 class="cartquantity"><b></b></h1>
+
+  <script>
+let cartquantity='';
+document.querySelector('.cartquantity').innerText = `Your bag has ${cartquantity} items`
+
+  </script>
+</body>
+</html>
